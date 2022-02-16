@@ -40,16 +40,9 @@ function App() {
   }
 
   const searchGifs = async (name) => {
-    if(resultRef.current==[]){
-      fetchDefaultJSON();
-    }
-    if(name!="" || name!=null){
-      console.log(resultRef.current.filter(item => item.name.includes(name.trim().toLowerCase())));
-      setResult(initResultRef.current.filter(item => item.name.includes(name.trim().toLowerCase())));
-      sendResultToJSONBin();
-    }else{
-      fetchDefaultJSON();
-    }
+    console.log(resultRef.current.filter(item => item.name.includes(name.trim().toLowerCase())));
+    setResult(initResultRef.current.filter(item => item.name.includes(name.trim().toLowerCase())));
+    sendResultToJSONBin();
   }
 
   useEffect(() => {
