@@ -40,7 +40,7 @@ function App() {
   }
 
   const searchGifs = async (name) => {
-    console.log(resultRef.current.filter(item => item.name.includes(name.trim().toLowerCase())));
+    console.log(initResultRef.current.filter(item => item.name.includes(name.trim().toLowerCase())));
     setResult(initResultRef.current.filter(item => item.name.includes(name.trim().toLowerCase())));
     sendResultToJSONBin();
   }
